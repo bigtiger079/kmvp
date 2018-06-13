@@ -21,8 +21,8 @@ open class BasePresenter<M : IModel, V : IView> : IPresenter, LifecycleObserver 
      */
     constructor(model: M, rootView: V) {
 
-        Preconditions.checkNotNull(model, "%s cannot be null", model::class.simpleName!!)
-        Preconditions.checkNotNull(rootView, "%s cannot be null", rootView::class.simpleName!!)
+        Preconditions.checkNotNull(model, "%s cannot be null", rootView::class.java.name)
+        Preconditions.checkNotNull(rootView, "%s cannot be null", rootView::class.java.name)
         this.mModel = model
         this.mRootView = rootView
         onStart()
@@ -34,7 +34,7 @@ open class BasePresenter<M : IModel, V : IView> : IPresenter, LifecycleObserver 
      * @param rootView
      */
     constructor(rootView: V) {
-        Preconditions.checkNotNull(rootView, "%s cannot be null", rootView::class.simpleName!!)
+        Preconditions.checkNotNull(rootView, "%s cannot be null", rootView::class.java.name)
         this.mRootView = rootView
         onStart()
     }

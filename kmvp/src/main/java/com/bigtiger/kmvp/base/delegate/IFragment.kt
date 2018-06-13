@@ -29,13 +29,6 @@ interface IFragment {
     fun setupFragmentComponent(appComponent: AppComponent)
 
     /**
-     * 是否使用 [EventBus]
-     *
-     * @return
-     */
-    fun useEventBus(): Boolean
-
-    /**
      * 初始化 View
      *
      * @param inflater
@@ -43,7 +36,7 @@ interface IFragment {
      * @param savedInstanceState
      * @return
      */
-    fun initView(inflater: LayoutInflater, @Nullable container: ViewGroup, @Nullable savedInstanceState: Bundle): View
+    fun initView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View
 
     /**
      * 初始化数据
