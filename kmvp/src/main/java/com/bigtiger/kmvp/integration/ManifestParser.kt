@@ -26,7 +26,7 @@ class ManifestParser(private val context: Context) {
     }
 
     companion object {
-        private val MODULE_VALUE = "ConfigModule"
+        private const val MODULE_VALUE = "ConfigModule"
 
         private fun parseModule(className: String): ConfigModule {
             val clazz: Class<*>

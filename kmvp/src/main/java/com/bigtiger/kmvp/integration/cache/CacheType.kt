@@ -9,11 +9,11 @@ import com.bigtiger.kmvp.di.component.AppComponent
 
 interface CacheType {
     companion object {
-        val RETROFIT_SERVICE_CACHE_TYPE_ID = 0
-        val CACHE_SERVICE_CACHE_TYPE_ID = 1
-        val EXTRAS_TYPE_ID = 2
-        val ACTIVITY_CACHE_TYPE_ID = 3
-        val FRAGMENT_CACHE_TYPE_ID = 4
+        const val RETROFIT_SERVICE_CACHE_TYPE_ID = 0
+        const val CACHE_SERVICE_CACHE_TYPE_ID = 1
+        const val EXTRAS_TYPE_ID = 2
+        const val ACTIVITY_CACHE_TYPE_ID = 3
+        const val FRAGMENT_CACHE_TYPE_ID = 4
         /**
          * [RepositoryManager]中存储 Retrofit Service 的容器
          */
